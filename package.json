@@ -3,8 +3,6 @@
    "version": "1.0.0",
    "description": "",
    "scripts": {
-       "build": "echo \"No build specified\" && exit 1",
-       "test": "echo \"No test specified\" && exit 1",
        "start": "node app.js"
     },
    "repository": {
@@ -16,5 +14,12 @@
    "bugs": {
        "url": "https://github.com/Nikmch/To-do-listV1/issues"
    },
-   "homepage": "https://github.com/Nikmch/To-do-listV1#readme"
+   "homepage": "https://github.com/Nikmch/To-do-listV1#readme",
+   "dependancies": {
+     "body-parser": "^1.18.3",
+     "ejs": "^2.6.1",
+     "express": "^4.16.3",
+     "lodash": "^4.17.21",
+     "mongoose": "^6.8.0"
+   }
 }
