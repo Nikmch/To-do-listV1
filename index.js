@@ -15,7 +15,7 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(express.static("public"));
 
-mongoose.set('strictQuery, false');
+mongoose.set('strictQuery', false);
 const connectDB = async ()=> {
   try {
     const conn = await mongoose.connect(process.env.MONGO_URI);
