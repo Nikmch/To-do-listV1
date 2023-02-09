@@ -5,14 +5,15 @@
    "scripts": {
        "build": "echo \"No build specified\" && exit 1",
        "test": "echo \"No test specified\" && exit 1",
-       "start": "node index.js"
+       "start": "node app.js"
     },
    "repository": {
           "type": "git",
        "url": "git+https://github.com/Nikmch/To-do-listV1.git"
    },
    "author": "",
-   "license": "ISC",   "bugs": {
+   "license": "ISC",
+   "bugs": {
        "url": "https://github.com/Nikmch/To-do-listV1/issues"
    },
    "homepage": "https://github.com/Nikmch/To-do-listV1#readme"
