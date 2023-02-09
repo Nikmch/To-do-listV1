@@ -7,8 +7,6 @@ const _ = require("lodash");
 const port = process.env.PORT || 3000;
 const app = express();
 
-const viewsPath = path.join(__dirname, '../todolist-main-files/views')
-app.set('views', viewsPath)
 
 app.set('view engine', 'ejs');
 
