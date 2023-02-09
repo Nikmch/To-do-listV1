@@ -14,17 +14,19 @@ app.use(bodyParser.urlencoded({
   extended: true
 }));
 app.use(express.static("public"));
-
-mongoose.set('strictQuery', false);
-const connectDB = async ()=> {
-  try {
-    const conn = await mongoose.connect(process.env.MONGODB_URI);
-    console.log('MongoDB Connected: ${conn.connection.host}');
-  } catch (error) {
-    console.log(error);
-    process.exit(1);
-  }
-}
+mongoose.connect("mongodb+srv://admin-niki:test123@cluster0.etmweb2.mongodb.net/todolistDB", {
+  useNewUrlParser: true
+});
+// mongoose.set('strictQuery', false);
+// const connectDB = async ()=> {
+//   try {
+//     const conn = await mongoose.connect(process.env.MONGODB_URI);
+//     console.log('MongoDB Connected: ${conn.connection.host}');
+//   } catch (error) {
+//     console.log(error);
+//     process.exit(1);
+//   }
+// }
 
 
 const itemsSchema = {
