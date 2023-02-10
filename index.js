@@ -1,4 +1,5 @@
 //jshint esversion:6
+require('dotenv').config()
 const express = require("express");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
@@ -19,7 +20,7 @@ app.use(express.static("public"));
 mongoose.set('strictQuery', false);
 const connectDB = async ()=> {
   try {
-    const conn = await mongoose.connect("mongodb+srv://admin-niki:test123@cluster0.etmweb2.mongodb.net/todolistDB", {
+    const conn = await mongoose.connect(MONGODB_URI, {
       useNewUrlParser: true
     });
     console.log('MongoDB Connected: ${conn.connection.host}');
