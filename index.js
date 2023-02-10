@@ -16,20 +16,19 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(express.static("public"));
 
-const uriDB = process.env.MONGODB_URI.replace('username_mongodb_atlas', process.env.MONGODB_ATLAS_USER).replace('password_mongodb_atlas', process.env.MONGODB_ATLAS_PASSWORD)+"todolistDB" || "mongodb://127.0.0.1:27017/todolistDB";
+const uriDB = process.env.MONGODB_URI.replace('username_mongodb_atlas', process.env.MONGODB_ATLAS_USER).replace('password_mongodb_atlas', process.env.MONGODB_ATLAS_PASSWORD)+"todolistDB" || "mongodb+srv://127.0.0.1:27017/todolistDB";
 
-mongoose.set('strictQuery', false);
+
 const connectDB = async ()=> {
   try {
-    const conn = await mongoose.connect(uriDB, {
-      useNewUrlParser: true
-    });
+    mongoose.set('strictQuery', false);
+    const conn = await mongoose.connect(uriDB);
     console.log('MongoDB Connected: ${conn.connection.host}');
   } catch (error) {
     console.log(error);
     process.exit(1);
   }
-}
+};
 
 
 const itemsSchema = {
